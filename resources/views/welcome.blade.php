@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-group {{ $errors->has('password') ? 'has-error' : ''}}">
                     <label for="password">Your Password</label>
-                    <input class="form-control" type="text" name="password" id="password" value="{{ Request::old('password')}}"></input>
+                    <input class="form-control" type="password" name="password" id="password" value="{{ Request::old('password')}}"></input>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <input type="hidden" name="_token" value="{{ Session::token() }}"></input>
