@@ -31,7 +31,7 @@ Route::get('/account',
 	['uses' => 'UserController@getAccount',
     'as' => 'account'
 ]);
-Route::post('/upateaccount',
+Route::post('/updateaccount',
     ['uses' => 'UserController@postSaveAccount',
     'as' => 'account.save'
 ]);
@@ -53,10 +53,12 @@ Route::get('/delete-post/{post_id}',
 	['uses' => 'PostController@getDeletePost',
 		'as' => 'post.delete',
 		'middleware' => 'auth'
-
 ]);
 Route::post('/edit', 
 	['uses' => 'PostController@postEditPost',
 	'as' => 'edit'
-
+]);
+Route::post('/like',
+    ['uses' => 'PostController@postLikePost',
+    'as' => 'like'
 ]);
