@@ -1,3 +1,7 @@
+body{
+	data-spy: scroll;
+}
+
 .new-post {
 	padding: 16px 0;
 	border-bottom: 1px solid #ccc;
@@ -41,3 +45,5 @@
 	background-color: #d1f9da;
 	color: green;
 }
+
+
