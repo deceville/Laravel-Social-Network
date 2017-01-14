@@ -81,6 +81,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <input type="hidden" name="_token" value="{{ Session::token() }}"></input>
                                     </form>
                                 </div>
                             </div>
