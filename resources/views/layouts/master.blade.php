@@ -8,7 +8,6 @@
         <title>@yield('title')</title>
         <!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{{ URL::to('src/css/main.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ URL::to('src/css/style.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ URL::to('src/css/animate.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ URL::to('src/css/nivo-lightbox-theme/default/default.css') }}">
@@ -18,18 +17,7 @@
     </head>
     <body>
     	@include('includes.header')
-        <!-- Section: intro -->
-        <section id="intro" class="intro">
-            <div class="slogan">
-                <h1>LOL MANIA</h1>
-                <p>Connect with League of Legends players all around the world</p>
-                <a href="#login" class="btn btn-skin scroll">Get started</a>
-            </div>  
-        </section>
-        <!-- /Section: intro -->
-    	<div class="container">
     		@yield('content')
-    	</div>
         @include('includes.footer')
     </body>
 

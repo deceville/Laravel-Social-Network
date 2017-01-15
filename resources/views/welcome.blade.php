@@ -6,7 +6,18 @@
 
 @section('content')
     @include('includes.message-block')
-
+    <!-- Section: intro -->
+    <div id="intro" class="container-fluid no-padding intro">
+        <div class="row">
+            <div class="slogan">
+                <h1>LOL MANIA</h1>
+                <p>Connect with League of Legends players all around the world</p>
+                <a href="#login" class="btn btn-skin scroll">Get started</a>
+            </div>  
+        </div>
+    </div>
+    
+    <!-- /Section: intro -->
 
     <!-- Section: login -->
     <section id="login" class="home-section text-center bg-gray">
@@ -43,7 +54,8 @@
                                         <div class="form-group">
                                             <div class="row">
                                                 <div class="col-sm-6 col-sm-offset-3">
-                                                    <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="btn btn-skin scroll" value="Log In">
+                                                    <button type="submit" name="login-submit" id="login-submit" tabindex="4" class="btn btn-skin scroll">Log in</button>
+                                                     <input type="hidden" name="_token" value="{{ Session::token() }}"></input>
                                                 </div>
                                             </div>
                                         </div>
@@ -56,7 +68,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <input type="hidden" name="_token" value="{{ Session::token() }}"></input>
                                     </form>
                                     <form id="register-form" action="{{ route('signup') }}" method="post" role="form" style="display: none;">
                                         <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
@@ -77,11 +88,11 @@
                                         <div class="form-group">
                                             <div class="row">
                                                 <div class="col-sm-6 col-sm-offset-3">
-                                                    <input type="submit" name="register-submit" id="register-submit" tabindex="5" class="btn btn-skin scroll" value="Register">
+                                                    <button type="submit" name="register-submit" id="register-submit" tabindex="5" class="btn btn-skin scroll">Register</button> 
+                                                    <input type="hidden" name="_token" value="{{ Session::token() }}"></input>
                                                 </div>
                                             </div>
                                         </div>
-                                        <input type="hidden" name="_token" value="{{ Session::token() }}"></input>
                                     </form>
                                 </div>
                             </div>

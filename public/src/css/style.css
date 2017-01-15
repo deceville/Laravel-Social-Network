@@ -463,6 +463,7 @@ input.gn-search:focus {
 #intro{	
 	background-image: url(../img/img-bg.jpg);
 	background-size: cover;
+
 }
 
 .intro .slogan {
@@ -974,7 +975,7 @@ footer {
 /* laravel */
 
 .new-post {
-	padding: 16px 0;
+	padding: 70px 0;
 	border-bottom: 1px solid #ccc;
 }
 
